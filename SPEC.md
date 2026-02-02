@@ -12,6 +12,7 @@ A modern mono-repo for a Kanban board service inspired by Jira.
 - API contracts between FE/BE
 - Dockerized deployment with Nginx reverse proxy
 - End-to-end testing with Playwright
+- Package management with pnpm
 
 ## Directory Structure
 

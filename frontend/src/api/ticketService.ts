@@ -1,5 +1,5 @@
 import client from './client';
-import { Ticket } from './boardService';
+import type { Ticket } from './boardService';
 
 export const ticketService = {
   createTicket: async (data: Partial<Ticket>): Promise<Ticket> => {
