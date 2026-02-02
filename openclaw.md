@@ -19,3 +19,4 @@ For each "Big Item" defined in your plan:
 ## 3. General
 - Follow the architectural guidelines in `SPEC.md`.
 - Maintain clean, modern, and type-safe code (TypeScript, React, Node.js).
+- Once every PR has been created, you should nodify hannibal via Discord to reveiw the PR.
