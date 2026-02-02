@@ -5,7 +5,7 @@ A modern mono-repo for a Kanban board service inspired by Jira.
 
 ### Goals
 - Mono-repo structure for frontend & backend
-- Jira-like Kanban UI
+- Jira-like Kanban UI ![alt text](image.png)
 - Frontend: ReactJS + TypeScript (styled like JIRA)
 - Backend: Node.js + TypeScript (+ Express or similar)
 - Persistent storage: PostgreSQL DB with Prisma ORM
@@ -47,3 +47,28 @@ claw-dev-board/
 - Auth (JWT, Passport.js, or similar)
 - Dockerization/devops setup (prod-ready)
 - Unit/end-to-end testing frameworks
+
+## Architecture Diagram
+
+```mermaid
+graph TB
+    subgraph Frontend ["Frontend (React + TS)"]
+        UI[User Interface]
+        API_Client[API Client]
+        UI --> API_Client
+    end
+
+    subgraph Backend ["Backend (Node.js + TS)"]
+        API_Server["API Server (Express)"]
+        Prisma[Prisma ORM]
+        API_Server --> Prisma
+    end
+
+    subgraph Database ["Database"]
+        Postgres[(PostgreSQL)]
+    end
+
+    API_Client -- "REST API (JSON)" --> API_Server
+    Prisma -- "SQL" --> Postgres
+```
+
