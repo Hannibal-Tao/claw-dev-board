@@ -1,18 +1,17 @@
-import express from "express";
-import { PrismaClient } from "@prisma/client";
+import express from 'express';
+import userRoutes from './routes/users';
 
 const app = express();
-const port = process.env.PORT || 4000;
-const prisma = new PrismaClient();
+const port = process.env.PORT || 3001;
 
 app.use(express.json());
 
-// Health check route
-app.get("/health", (req, res) => {
-  res.json({ status: "ok" });
+app.use('/users', userRoutes);
+
+app.get('/', (req, res) => {
+  res.send('Claw Kanban API');
 });
 
-// Server start
 app.listen(port, () => {
-  console.log(`Backend listening on port ${port}`);
+  console.log(`Server running at http://localhost:${port}`);
 });
