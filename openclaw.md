@@ -11,7 +11,8 @@ You are OpenClaw, an AI agent responsible for implementing the Claw Kanban Board
 ## 2. Development Workflow (Big Items)
 For each "Big Item" defined in your plan:
 - **User Story**: Create a dedicated user story file in the `user-stories/` folder. Format: `user-stories/<feature-name>.md`.
-- **Pull Request**: Each Big Item must be implemented in its own separate Pull Request (PR). Do not squash multiple big features into one PR.
+- **Feature Branch**: Create a dedicated feature branch for the item. Format: `feature/<feature-name>`.
+- **Pull Request**: Each Big Item must be implemented in its own separate Pull Request (PR) from the feature branch. Do not squash multiple big features into one PR.
 - **Testing**:
     - Every PR MUST include tests (unit, integration, or e2e as appropriate).
     - If a test fails or an issue is encountered during development, you MUST create an issue on the repository describing the problem.
