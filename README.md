@@ -11,18 +11,18 @@ A modern Kanban board implementation inspired by JIRA, built with React, Node.js
 ### 2. Backend Setup
 ```bash
 cd backend
-npm install
-docker-compose up -d  # Starts PostgreSQL
+pnpm install
+docker compose up -d  # Starts PostgreSQL from root
 npx prisma migrate dev --name init
 npx prisma db seed    # Initializes Board ID 1
-npm run dev           # API starts on http://localhost:3001
+pnpm dev              # API starts on http://localhost:3001
 ```
 
 ### 3. Frontend Setup
 ```bash
 cd frontend
-npm install
-npm run dev           # App starts on http://localhost:5173
+pnpm install
+pnpm dev              # App starts on http://localhost:5173
 ```
 
 ### 4. Running with Docker (Consolidated)
@@ -40,8 +40,8 @@ npx playwright test
 ```
 
 ## 🛠 Tech Stack
-- **Frontend:** React 19, TypeScript, Vite, `@hello-pangea/dnd`
-- **Backend:** Node.js, Express, Prisma ORM
+- **Frontend:** React 19, TypeScript, Vite, `@hello-pangea/dnd`, pnpm
+- **Backend:** Node.js, Express, Prisma ORM, pnpm
 - **Database:** PostgreSQL (Docker)
 
 ## 📖 Features

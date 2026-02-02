@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { DragDropContext, Droppable, Draggable, DropResult } from '@hello-pangea/dnd';
-import { boardService, Board, Column, Ticket } from '../api/boardService';
+import { DragDropContext, Droppable, Draggable } from '@hello-pangea/dnd';
+import type { DropResult } from '@hello-pangea/dnd';
+import { boardService } from '../api/boardService';
+import type { Board } from '../api/boardService';
 import { ticketService } from '../api/ticketService';
 import './KanbanBoard.css';
 
