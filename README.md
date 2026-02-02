@@ -25,6 +25,20 @@ npm install
 npm run dev           # App starts on http://localhost:5173
 ```
 
+### 4. Running with Docker (Consolidated)
+From the root directory:
+```bash
+docker compose up --build -d
+```
+The application will be available at:
+- **Frontend:** http://localhost (via Nginx proxy)
+- **Backend API:** http://localhost/api/
+
+### 5. Running E2E Tests
+```bash
+npx playwright test
+```
+
 ## 🛠 Tech Stack
 - **Frontend:** React 19, TypeScript, Vite, `@hello-pangea/dnd`
 - **Backend:** Node.js, Express, Prisma ORM
